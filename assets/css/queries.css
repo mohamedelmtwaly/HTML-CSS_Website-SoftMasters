@@ -1,0 +1,161 @@
+/***********************/
+/* CUSTOMIZING SCREENS */
+/***********************/
+/* =======1.MD SCREEN===== */
+@media (min-width: 768px) {
+  /* ==========CONTAINER========== */
+  .container {
+    width: 750px;
+  }
+  /***********************/
+  /*===== HEADER =====*/
+  /**********************/
+  header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+  }
+  .logo {
+    height: 70px;
+  }
+  .main-nav-link {
+    font-size: 18px;
+    height: 70px;
+  }
+  .mega-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid var(--main-color);
+    padding: 30px;
+  }
+  .img-mega-menu {
+    display: block;
+    width: 350px;
+  }
+  .links-mega-menu {
+    width: 350px;
+  }
+  .links-mega-menu li:last-child {
+    border-bottom: none;
+  }
+  /***********************/
+  /*===== HERO SECTION =====*/
+  /**********************/
+  .heading-primary {
+    font-size: 40px;
+  }
+  .hero-description {
+    font-size: 22px;
+    line-height: 1.7;
+    margin: 5px 0 0;
+    color: var(--gray-text-color);
+    max-width: 500px;
+  }
+  /***********************/
+  /*===== ABOUT SECTION =====*/
+  /**********************/
+  .cards-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .card-about {
+    width: calc(50% - 20px);
+  }
+}
+/* =======2.LG SCREEN======= */
+@media (min-width: 1024px) {
+  /* ==========CONTAINER========== */
+  .container {
+    width: 980px;
+  }
+  /***********************/
+  /*===== HERO SECTION =====*/
+  /**********************/
+  .section-hero .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    text-align: left;
+  }
+  .heading-primary {
+    font-size: 40px;
+  }
+  .hero-img-box {
+    position: relative;
+    display: block;
+    width: 450px;
+    animation: up-and-down 5s linear infinite;
+    padding-left: 10px;
+  }
+  .hero-text-box {
+    flex: 1;
+  }
+  .hero-img-box img {
+    max-width: 100%;
+  }
+  @keyframes up-and-down {
+    0%,
+    100% {
+      top: 0;
+    }
+    50% {
+      top: -20px;
+    }
+  }
+  /***********************/
+  /*===== ABOUT SECTION =====*/
+  /**********************/
+  .card-about {
+    width: calc(33.3% - 20px);
+  }
+  /***********************/
+  /*==== OUR SKILLS ====*/
+  /**********************/
+  .cards-skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  .card-skills {
+    flex: 1;
+    order: 2;
+  }
+  .img-skill {
+    width: 600px;
+    order: 1;
+  }
+  .img-skill img {
+    display: block;
+    border-radius: 4px;
+  }
+  /***********************/
+  /*===== WORK STEPS =====*/
+  /**********************/
+  .container-work {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .img-work {
+    width: 800px;
+    display: block;
+  }
+  .img-work img {
+    width: 100%;
+  }
+}
+/* =======3.XL SCREEN======= */
+@media (min-width: 1240px) {
+  .container {
+    width: 1200px;
+  }
+}
+/* =======4.2XL SCREEN======= */
+@media (min-width: 1536px) {
+}

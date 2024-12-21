@@ -1,0 +1,142 @@
+/***********************/
+/* VARIABLES CSS */
+/***********************/
+:root {
+  /*========== COLOR ==========*/
+  --main-color: #06bbcc;
+  --section-background: #ececec;
+  --dark-text-color: #181d38;
+  --gray-text-color: #52565b;
+  /*======== TYPOGRAPHY ======*/
+  --main-font-family: "Cairo", sans-serif;
+
+  /*======== SPACING ======*/
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  /*======== TRANSITION ======*/
+  --main-transition: 0.3s;
+}
+/***********************/
+/* BASE */
+/***********************/
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  line-height: 1.15;
+}
+body {
+  font-family: var(--main-font-family);
+  font-weight: 400;
+}
+/**************************/
+/* GENERAL REUSABLE COMPONENTS */
+/**************************/
+/*========== LIST STYLE ==========*/
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/*========== LINK STYLE==========*/
+a {
+  text-decoration: none;
+}
+/* ==========CONTAINER========== */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ========== HEADINGS ========== */
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  color: var(--dark-text-color);
+  font-weight: 700;
+}
+.heading-primary {
+  font-size: 40px;
+  margin: 0;
+  letter-spacing: -2px;
+}
+.heading-secondary {
+  font-size: 30px;
+}
+/* ========== HEADING SECTION ========== */
+.heading-section {
+  font-size: 30px;
+  width: fit-content;
+  background-color: #fff;
+  border: 2px solid var(--dark-text-color);
+  padding: 10px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 1;
+  transition: var(--main-transition);
+}
+.heading-section:hover {
+  color: #fff;
+  border: 2px solid #fff;
+  transition-delay: 0.5s;
+}
+.heading-section::before,
+.heading-section::after {
+  content: "";
+  background-color: var(--main-color);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+.heading-section::before {
+  left: -30px;
+}
+.heading-section::after {
+  right: -30px;
+}
+.heading-section:hover::before {
+  animation: left-move 0.5s linear forwards;
+  z-index: -1;
+}
+.heading-section:hover::after {
+  animation: right-move 0.5s linear forwards;
+  z-index: -1;
+}
+@keyframes left-move {
+  50% {
+    left: 0;
+    width: 14px;
+    height: 14px;
+  }
+  100% {
+    width: 50%;
+    height: 100%;
+    border-radius: 0;
+    left: 0;
+  }
+}
+@keyframes right-move {
+  50% {
+    right: 0;
+    width: 14px;
+    height: 14px;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
